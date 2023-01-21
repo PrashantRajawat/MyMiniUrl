@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import postUrl from "../api/url";
-import a from "../../styles/home.module.css";
+import a from "../../styles/Home.module.css";
 import ParticlesBack from "../particles";
 export default function MyUrl() {
   const [url, setUrl] = useState();
