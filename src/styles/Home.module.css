@@ -1,56 +1,223 @@
-.homeContainer {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    112.1deg,
-    rgb(32, 38, 57) 11.4%,
-    rgb(63, 76, 119) 70.2%
-  );
+@media screen and (min-width: 10px) {
+  .homeContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, #fff1eb 0%, #ace0f9 50%);
+    /* position: relative; */
+  }
+  .head {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .cloud {
+    width: 90%;
+    height: auto;
+    background: #eceff1;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 130px 150px 100px 100px;
+    position: absolute;
+  }
+  .cloud :nth-child(1) {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 1000;
+    width: 100%;
+  }
+  .cloud::after,
+  .cloud::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: inherit;
+  }
+
+  .cloud::after {
+    width: 20%;
+    height: 4rem;
+    top: -20px;
+    left: 50px;
+  }
+
+  .cloud::before {
+    width: 40%;
+    height: 6rem;
+    top: -40px;
+    left: 90px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    gap: 1rem;
+  }
+  .input {
+    height: 30px;
+    border: 1px solid rgb(32, 38, 57);
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ace0f9;
+    background-color: #f1f6f9;
+    color: #acafb1;
+  }
+  .input::placeholder {
+    color: #ace0f9;
+  }
+  .input {
+    outline-color: #ace0f9;
+  }
+  .button {
+    height: 30px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    /* margin-top: 1rem; */
+    background: #ace0f9;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid #ace0f9;
+    z-index: 1000;
+  }
+  .button:hover {
+    background: white;
+    border: 1px solid #ace0f9;
+    color: #ace0f9;
+  }
+  .resultData {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+    color: #ace0f9;
+    text-align: center;
+    margin: 0px 10px;
+    margin-bottom: 1rem;
+  }
 }
-.head {
-  font-size: 2rem;
-  font-weight: 600;
-  color: rgb(32, 38, 57);
-  text-align: center;
+@media screen and (min-width: 300px) {
+  .cloud::after {
+    width: 30%;
+    height: 6rem;
+    top: -30px;
+    left: 50px;
+  }
+
+  .cloud::before {
+    width: 40%;
+    height: 8rem;
+    top: -50px;
+    left: 130px;
+  }
 }
-.urlContainer {
-  height: 18rem;
-  width: auto;
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /* gap: 2rem; */
-  padding: 1rem;
-  z-index: 1111;
+@media screen and (min-width: 500px) {
+  .cloud {
+    width: 80%;
+  }
+  .cloud::after {
+    width: 30%;
+    height: 8rem;
+    top: -30px;
+    left: 50px;
+  }
+
+  .cloud::before {
+    width: 40%;
+    height: 10rem;
+    top: -50px;
+    left: 150px;
+  }
 }
-.form > input {
-  height: 50px;
-  width: 20rem;
-  border: 1px solid rgb(32, 38, 57);
-  border-radius: 10px;
-  padding-left: 10px;
-  font-size: 1.2rem;
+@media screen and (min-width: 700px) {
+  .cloud {
+    width: 70%;
+  }
+
+  .cloud::after {
+    width: 30%;
+    height: 9rem;
+    top: -40px;
+    left: 60px;
+  }
+
+  .cloud::before {
+    width: 40%;
+    height: 11rem;
+    top: -60px;
+    left: 180px;
+  }
 }
-.form > button {
-  height: 50px;
-  width: 8rem;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  background: linear-gradient(
-    112.1deg,
-    rgb(32, 38, 57) 11.4%,
-    rgb(63, 76, 119) 70.2%
-  );
-  margin-left: 2rem;
-  cursor: pointer;
-  font-size: 1.2rem;
+@media screen and (min-width: 900px) {
+  .cloud {
+    width: 60%;
+  }
+
+  .cloud::after {
+    width: 30%;
+    height: 9rem;
+    top: -40px;
+    left: 80px;
+  }
+
+  .cloud::before {
+    width: 40%;
+    height: 11rem;
+    top: -60px;
+    left: 250px;
+  }
+  .button {
+    height: 40px;
+  }
+  .input {
+    height: 40px;
+  }
+  .head {
+    font-size: 2rem;
+  }
 }
-.text{
-    font-size: 1.3rem;
+@media screen and (min-width: 1200px) {
+  .cloud {
+    width: 40%;
+  }
+
+  .cloud::after {
+    width: 30%;
+    height: 10rem;
+    top: -60px;
+    left: 100px;
+  }
+
+  .cloud::before {
+    width: 30%;
+    height: 12rem;
+    top: -80px;
+    left: 230px;
+  }
+  .button {
+    height: 40px;
+  }
+  .input {
+    height: 40px;
+  }
+  .head {
+    font-size: 2rem;
+  }
 }

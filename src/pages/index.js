@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import MyUrl from "./myurl";
-import Particles from "./particles";
+import Particles from "./myurl/particles";
 
 
 const inter = Inter({ subsets: ["latin"] });
