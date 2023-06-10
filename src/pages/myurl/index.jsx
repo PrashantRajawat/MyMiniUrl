@@ -18,13 +18,14 @@ export default function MyUrl() {
       body: encodedParams,
     };
 
-    fetch(`${process.env.NEXT_PUBLIC_HOST}`, options)
-      .then((response) => {
-        response.json();
-        console.log(response);
-        setNewUrl(response.result_url);
-      })
-      .catch((err) => console.error(err));
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}`, options);
+      const data = await response.json();
+      // console.log(data.result_url);
+      setNewUrl(data.result_url);
+    } catch (err) {
+      console.error(err);
+    }
   };
   const handleCopyButtonClick = () => {
     navigator.clipboard.writeText(newUrl);
@@ -35,7 +36,7 @@ export default function MyUrl() {
       <ParticlesBack />
       <div className={a.cloud}>
         <div>
-          <div className={a.head}>MyMiniUrl</div>
+          <div className={a.head}>Shortify</div>
           <form onSubmit={handleSubmit} className={a.form}>
             <input
               type="text"
